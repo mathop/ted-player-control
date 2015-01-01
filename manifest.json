@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "TED Player Control",
   "description": "Shortcut to play/pause videos on TED.com using the spacebar.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "icons": {
     "48": "img/icon48.png",
     "128": "img/icon128.png"
@@ -12,7 +12,10 @@
   ],
   "content_scripts": [
     {
-      "matches": ["http://www.ted.com/talks/*"],
+      "matches": [
+        "http://www.ted.com/talks/*",
+        "http://www.ted.com/playlists/*"
+      ],
       "js": ["src/contentscript.js"]
     }
   ],
